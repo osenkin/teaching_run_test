@@ -1,0 +1,23 @@
+{
+	"dependencies": {
+		"type": "module",
+		"axios": "^1.19.0",
+		"cypress": "^15.20.1",
+		"fs": "^0.0.1-security",
+		"husky": "^9.1.7",
+		"jest": "^30.4.2"
+	},
+	"scripts": {
+		"test": "jest",
+		"prepare": "husky",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@faker-js/faker": "^10.6.0",
+		"eslint": "^10.8.1",
+		"eslint-config-prettier": "^10.1.8",
+		"globals": "^17.11.0",
+		"jest-html-reporters": "^3.1.7"
+	}
+}
