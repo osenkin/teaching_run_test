@@ -10,7 +10,7 @@ module.exports = defineConfig({
 		chromeWebSecurity: false,
 		video: false,
 		screenshotOnRunFailure: true,
-		setupNodeEvents(on, config) {
+		setupNodeEvents() {
 			// implement node event listeners here
 		},
 		defaultCommandTimeout: 8000,
