@@ -1,6 +1,8 @@
 {
+	"name": "qauto-tests",
+	"version": "1.0.0",
+	"type": "module",
 	"dependencies": {
-		"type": "module",
 		"axios": "^1.19.0",
 		"cypress": "^15.20.1",
 		"fs": "^0.0.1-security",
@@ -10,7 +12,11 @@
 	"scripts": {
 		"test": "jest",
 		"prepare": "husky",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"cypress:open:qauto": "cypress open --config-file cypress.config.qauto.js",
+		"cypress:open:qauto2": "cypress open --config-file cypress.config.qauto2.js",
+		"cypress:run:qauto": "cypress run --config-file cypress.config.qauto.js",
+		"cypress:run:qauto2": "cypress run --config-file cypress.config.qauto2.js"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
@@ -18,6 +24,9 @@
 		"eslint": "^10.8.1",
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.11.0",
-		"jest-html-reporters": "^3.1.7"
+		"jest-html-reporters": "^3.1.7",
+		"mochawesome": "^8.0.1",
+		"mochawesome-merge": "^5.1.1",
+		"mochawesome-report-generator": "^6.3.2"
 	}
 }
