@@ -1,4 +1,4 @@
-import faker from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 import ExpensesPage from "../../pageObjects/ExpensesPage";
 
 describe("Test page Expenses from POM", () => {
@@ -25,7 +25,7 @@ describe("Test page Expenses from POM", () => {
 			const year = today.getFullYear();
 			return `${day}.${month}.${year}`;
 		};
-		const fakerMiliage = faker.number.int({ min: 1000, max: 2000 }).toString();
+		const fakerMiliage = faker.number.int({ min: 1000, max: 10000 }).toString();
 		ExpensesPage.addExpenseButton.click();
 		ExpensesPage.reportDateInput.clear().type(getRandomFakerDate());
 		ExpensesPage.miliageInput.clear().type(fakerMiliage);

@@ -17,7 +17,7 @@ describe("Test page Garage from POM", () => {
 
 	it("Great create auto in garage", () => {
 		GaragePage.garageTitle.should("have.text", "Garage");
-		GaragePage.addCar("Porsche", "911", "1000");
-		cy.contains("Porsche 911").should("be.visible");
+		GaragePage.addCar("BMW", "3", "1000");
+		cy.contains("BMW 3").should("be.visible");
 	});
 });
