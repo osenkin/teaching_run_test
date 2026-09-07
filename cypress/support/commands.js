@@ -50,3 +50,16 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
 	}
 	return originalFn(element, text, options);
 });
+Cypress.Commands.add("createExpenseViaApi", (carId, expenseData) => {
+	return cy.request({
+		method: "POST",
+		url: `/api/expenses`,
+		body: {
+			carId: carId,
+			reportedAt: expenseData.reportedAt,
+			mileage: expenseData.mileage,
+			liters: expenseData.liters,
+			totalCost: expenseData.totalCost,
+		},
+	});
+});
