@@ -7,6 +7,8 @@ export default [
 			"jest-html-reporters-attach/**",
 			"cypress/screenshots/**",
 			"cypress/videos/**",
+			"cypress/reports/**/*",
+			"node_modules/**/*",
 		],
 	},
 
