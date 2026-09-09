@@ -1,18 +1,29 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
+import registerMochawesome from "cypress-mochawesome-reporter/plugin.js";
 
-module.exports = defineConfig({
-	allowCypressEnv: false,
+export default defineConfig({
+	allowCypressEnv: true,
+	reporter: "cypress-mochawesome-reporter",
+	reporterOptions: {
+		charts: true,
+		reportPageTitle: "QAuto Test Report",
+		embeddedScreenshots: true,
+		inlineAssets: true,
+		saveAllAttempts: false,
+	},
 
 	e2e: {
-		baseUrl: "https://example.cypress.io",
 		viewportWidth: 1920,
 		viewportHeight: 1080,
 		chromeWebSecurity: false,
 		video: false,
 		screenshotOnRunFailure: true,
-		setupNodeEvents() {
-			// implement node event listeners here
+
+		setupNodeEvents(on, config) {
+			registerMochawesome(on);
+			return config;
 		},
+
 		defaultCommandTimeout: 8000,
 		pageLoadTimeout: 60000,
 		requestTimeout: 10000,
