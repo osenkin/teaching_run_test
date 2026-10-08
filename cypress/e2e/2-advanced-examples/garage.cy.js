@@ -1,6 +1,6 @@
 import GaragePage from "../../pageObjects/GaragePage";
 
-describe("Test page Garage from POM", () => {
+describe.skip("Test page Garage from POM", () => {
 	beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");

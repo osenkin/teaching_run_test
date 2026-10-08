@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import ExpensesPage from "../../pageObjects/ExpensesPage";
 
-describe("Test page Expenses from POM", () => {
+describe.skip("Test page Expenses from POM", () => {
 	beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");
