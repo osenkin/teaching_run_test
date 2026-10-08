@@ -15,7 +15,7 @@ describe("Test page Garage from POM", () => {
 		cy.contains("Login").click();
 	});
 
-	skip.it("Great create auto in garage", () => {
+	context.skip("Great create auto in garage", () => {
 		GaragePage.garageTitle.should("have.text", "Garage");
 		GaragePage.addCar("BMW", "3", "1000");
 		cy.contains("BMW 3").should("be.visible");
