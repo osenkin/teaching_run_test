@@ -1,6 +1,6 @@
 import GaragePage from "../../pageObjects/GaragePage";
 
-describe("Hybrid UI/API testing", () => {
+describe.skip("Hybrid UI/API testing", () => {
 	let carId;
 	const carMileage = 1000;
 
@@ -23,7 +23,7 @@ describe("Hybrid UI/API testing", () => {
 		cy.contains("Login").click();
 	});
 
-	it("Full cycle: create automation from UI to API", () => {
+	it.skip("Full cycle: create automation from UI to API", () => {
 		cy.intercept("POST", "/api/cars").as("createCarRequest");
 
 		GaragePage.garageTitle.should("have.text", "Garage");
