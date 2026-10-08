@@ -16,7 +16,7 @@ describe.skip("Test page Expenses from POM", () => {
 		cy.get(".modal-footer .btn-primary").click();
 	});
 
-	context.skip("Create expense in expenses", () => {
+	it.skip("Create expense in expenses", () => {
 		cy.contains("Fuel expenses").click();
 		const getRandomFakerDate = () => {
 			const today = new Date();
