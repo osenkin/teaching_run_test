@@ -1,13 +1,13 @@
 import GaragePage from "../../pageObjects/GaragePage";
 
-describe("Hybrid UI/API testing", () => {
+describe.skip("Hybrid UI/API testing", () => {
 	let carId;
 	const carMileage = 1000;
 
 	const today = new Date();
 	const apiDate = today.toISOString().split("T")[0];
 
-	skip.beforeEach(() => {
+	beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");
 		const rawBaseUrl = Cypress.config("baseUrl");
@@ -23,7 +23,7 @@ describe("Hybrid UI/API testing", () => {
 		cy.contains("Login").click();
 	});
 
-	skip.it("Full cycle: create automation from UI to API", () => {
+	it.skip("Full cycle: create automation from UI to API", () => {
 		cy.intercept("POST", "/api/cars").as("createCarRequest");
 
 		GaragePage.garageTitle.should("have.text", "Garage");
