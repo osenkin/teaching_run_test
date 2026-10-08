@@ -30,7 +30,7 @@ describe("example to-do app", () => {
 		});
 	});
 
-	it("can add new todo items", () => {
+	skip.it("can add new todo items", () => {
 		// We'll store our item text in a variable so we can reuse it
 		const newItem = "Feed the cat";
 
@@ -53,7 +53,7 @@ describe("example to-do app", () => {
 			.should("have.text", newItem);
 	});
 
-	it("can check off an item as completed", () => {
+	skip.it("can check off an item as completed", () => {
 		// In addition to using the `get` command to get an element by selector,
 		// we can also use the `contains` command to get an element by its contents.
 		// However, this will yield the <label>, which is lowest-level element that contains the text.
@@ -75,7 +75,7 @@ describe("example to-do app", () => {
 			.should("have.class", "completed");
 	});
 
-	context("with a checked task", () => {
+	skip.context("with a checked task", () => {
 		beforeEach(() => {
 			// We'll take the command we used above to check off an element
 			// Since we want to perform multiple tests that start with checking

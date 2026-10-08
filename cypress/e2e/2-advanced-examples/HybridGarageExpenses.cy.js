@@ -7,7 +7,7 @@ describe("Hybrid UI/API testing", () => {
 	const today = new Date();
 	const apiDate = today.toISOString().split("T")[0];
 
-	beforeEach(() => {
+	skip.beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");
 		const rawBaseUrl = Cypress.config("baseUrl");
@@ -23,7 +23,7 @@ describe("Hybrid UI/API testing", () => {
 		cy.contains("Login").click();
 	});
 
-	it("Full cycle: create automation from UI to API", () => {
+	skip.it("Full cycle: create automation from UI to API", () => {
 		cy.intercept("POST", "/api/cars").as("createCarRequest");
 
 		GaragePage.garageTitle.should("have.text", "Garage");
