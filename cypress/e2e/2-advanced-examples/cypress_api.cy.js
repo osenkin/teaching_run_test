@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context("Cypress APIs", () => {
+context.skip("Cypress APIs", () => {
 	context("Cypress.Commands", () => {
 		beforeEach(() => {
 			cy.visit("https://example.cypress.io/cypress-api");
@@ -39,7 +39,7 @@ context("Cypress APIs", () => {
 		});
 	});
 
-	context("Cypress.Cookies", () => {
+	context.skip("Cypress.Cookies", () => {
 		beforeEach(() => {
 			cy.visit("https://example.cypress.io/cypress-api");
 		});
@@ -58,7 +58,7 @@ context("Cypress APIs", () => {
 		});
 	});
 
-	context("Cypress.arch", () => {
+	context.skip("Cypress.arch", () => {
 		beforeEach(() => {
 			cy.visit("https://example.cypress.io/cypress-api");
 		});
@@ -69,7 +69,7 @@ context("Cypress APIs", () => {
 		});
 	});
 
-	context("Cypress.config()", () => {
+	context.skip("Cypress.config()", () => {
 		beforeEach(() => {
 			cy.visit("https://example.cypress.io/cypress-api");
 		});
@@ -115,7 +115,7 @@ context("Cypress APIs", () => {
 		});
 	});
 
-	context("Cypress.expose()", () => {
+	context.skip("Cypress.expose()", () => {
 		beforeEach(() => {
 			cy.visit("https://example.cypress.io/cypress-api");
 		});

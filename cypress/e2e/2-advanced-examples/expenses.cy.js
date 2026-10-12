@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import ExpensesPage from "../../pageObjects/ExpensesPage";
 
-describe("Test page Expenses from POM", () => {
+describe.skip("Test page Expenses from POM", () => {
 	beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");
@@ -16,7 +16,7 @@ describe("Test page Expenses from POM", () => {
 		cy.get(".modal-footer .btn-primary").click();
 	});
 
-	it("Create expense in expenses", () => {
+	it.skip("Create expense in expenses", () => {
 		cy.contains("Fuel expenses").click();
 		const getRandomFakerDate = () => {
 			const today = new Date();

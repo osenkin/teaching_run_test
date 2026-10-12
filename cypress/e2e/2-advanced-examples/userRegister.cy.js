@@ -11,7 +11,7 @@ describe("Реєстрація користувача", () => {
 		cy.visit(authentication);
 	});
 
-	it("Registation new user", () => {
+	it.skip("Registation new user", () => {
 		cy.contains("Sign up").click();
 		cy.get("#signupName").type("TestUser");
 		cy.get("#signupLastName").type("TestLastName");

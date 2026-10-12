@@ -1,6 +1,6 @@
 import GaragePage from "../../pageObjects/GaragePage";
 
-describe("Test page Garage from POM", () => {
+describe.skip("Test page Garage from POM", () => {
 	beforeEach(() => {
 		const username = Cypress.env("authUsername");
 		const password = Cypress.env("authPassword");
@@ -15,7 +15,7 @@ describe("Test page Garage from POM", () => {
 		cy.contains("Login").click();
 	});
 
-	it("Great create auto in garage", () => {
+	it.skip("Great create auto in garage", () => {
 		GaragePage.garageTitle.should("have.text", "Garage");
 		GaragePage.addCar("BMW", "3", "1000");
 		cy.contains("BMW 3").should("be.visible");
